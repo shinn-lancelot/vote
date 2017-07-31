@@ -36,10 +36,24 @@
     </div>
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
+      var vote_id;
       $('.vote-btn').on('click', function(){
-        $.ajax({
-          
-        });
+          vote_id = $(this).attr('data-id');
+          console.log(vote_id);
+          $.ajax({
+              url: '/vote',
+              type: 'post',
+              data: {id: vote_id,datas: 1},
+              dataType: 'json',
+              success: function(data){
+                  console.log(data);
+                  alert(data.msg);
+                  if(data.code == 1001){
+                      window.location.reload();
+                  }
+              },
+              error: function(){}
+          });
       });
     </script>
   </body>

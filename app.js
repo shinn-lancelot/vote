@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var stylus = require('stylus');
 
 var index = require('./routes/home/index');
+var vote = require('./routes/home/vote');
 
 //db connect
 var mongoose=require('mongoose');
@@ -29,6 +30,7 @@ app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/dev')));
 
 app.use('/', index);
+app.use('/vote', vote);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
