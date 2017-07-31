@@ -1,0 +1,104 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px "Microsoft YaHei UI", Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  width: 100%;
+  height: auto;
+}
+header,
+section,
+footer {
+  width: 100%;
+  height: auto;
+}
+.banner {
+  width: 100%;
+  height: auto;
+}
+.content {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+.item-list {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.item {
+  display: inline-block;
+  width: 22%;
+  height: auto;
+  background: #fff;
+  font-size: 1rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin: 0.5rem 4% 0.5rem 0;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px #c9c9c9;
+}
+.item:nth-child(4n) {
+  margin-right: 0;
+}
+.item:hover {
+  box-shadow: 0px 0px 20px #b9b9b9;
+}
+.item-img-frame {
+  width: 100%;
+  max-height: 8rem;
+  overflow-y: hidden;
+}
+.item-img {
+  width: 100%;
+  height: auto;
+}
+.item-name {
+  margin: 10px 0;
+  padding: 0 0 0 5px;
+  color: #666;
+}
+.item-info-frame {
+  width: 100%;
+  font-size: 0;
+}
+.vote-num {
+  width: 60%;
+  margin: 10px 0;
+  padding: 0 0 0 5px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  color: #8a8a8a;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.vote-btn {
+  width: 34%;
+  text-align: center;
+  margin: 0 3%;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  border: 0;
+  color: #fff;
+  background: #6cc3c4;
+  display: inline-block;
+  outline: none;
+}
+.vote-btn:hover {
+  opacity: 0.8;
+}
+.vote-btn:active {
+  opacity: 1;
+}
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 20px auto;
+}

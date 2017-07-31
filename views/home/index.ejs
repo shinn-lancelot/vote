@@ -13,35 +13,34 @@
       </header>
       <section>
         <div class="content">
-          选项内容
+          <h4>投票选项</h4>
           <ul class="item-list">
+            <% items.forEach(function(item){ %>
             <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
+              <div class="item-img-frame">
+                <img src="<%=item.img %>" class="item-img" alt="">
+              </div>
+              <h4 class="item-name"><%=item.title %></h4>
+              <div class="item-info-frame">
+                <p class="vote-num"><%=item.vote_num %>票</p>
+                <button class="vote-btn" data-id="<%=item._id %>">投票</button>
+              </div>
             </li>
-            <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
-            </li>
-            <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
-            </li>
-            <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
-            </li>
-            <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
-            </li>
-            <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
-            </li>
-            <li class="item">
-              11111111111111111111111111111111111111111111111111111111111
-            </li>
+            <% }) %>
           </ul>
         </div>
       </section>
       <footer>
-        footer
+        <div class="copyright">云杉科技 &copy 版权所有</div>
       </footer>
     </div>
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $('.vote-btn').on('click', function(){
+        $.ajax({
+          
+        });
+      });
+    </script>
   </body>
 </html>
