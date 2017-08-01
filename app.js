@@ -9,6 +9,10 @@ var stylus = require('stylus');
 var index = require('./routes/home/index');
 var vote = require('./routes/home/vote');
 
+var login = require('./routes/admin/login');
+var admin = require('./routes/admin/index');
+var addItem = require('./routes/admin/addItem');
+
 //db connect
 var mongoose=require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test');
@@ -29,8 +33,13 @@ app.use(stylus.middleware(path.join(__dirname, 'public')));
 //develop static path
 app.use(express.static(path.join(__dirname, 'public/dev')));
 
+//home
 app.use('/', index);
 app.use('/vote', vote);
+//admin
+app.use('/admin', login);
+app.use('/admin/index', admin);
+app.use('/admin/addItem', addItem);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
