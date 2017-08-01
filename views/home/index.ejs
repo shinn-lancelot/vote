@@ -22,8 +22,8 @@
               </div>
               <h4 class="item-name"><%=item.title %></h4>
               <div class="item-info-frame">
-                <p class="vote-num"><%=item.vote_num %>票</p>
-                <button class="vote-btn" data-id="<%=item._id %>">投票</button>
+                <p class="vote-num"><i><%=item.vote_num %></i> 票</p>
+                <div class="vote-btn" data-id="<%=item._id %>">投票</div>
               </div>
             </li>
             <% }) %>
@@ -36,10 +36,11 @@
     </div>
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
-      var vote_id;
+      var vote_id,vote_num,_this;
       $('.vote-btn').on('click', function(){
-          vote_id = $(this).attr('data-id');
-          console.log(vote_id);
+          _this = $(this);
+          vote_id = _this.attr('data-id');
+          vote_num = parseInt(_this.parents('.item-info-frame').find('.vote-num i').html());
           $.ajax({
               url: '/vote',
               type: 'post',
@@ -49,7 +50,8 @@
                   console.log(data);
                   alert(data.msg);
                   if(data.code == 1001){
-                      window.location.reload();
+//                      window.location.reload();
+                      _this.parents('.item-info-frame').find('.vote-num i').html(vote_num+1);
                   }
               },
               error: function(){}
