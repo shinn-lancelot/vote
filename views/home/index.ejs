@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi">
+    <link rel='stylesheet' href='/home/stylesheets/base.css' />
     <link rel='stylesheet' href='/home/stylesheets/style.css' />
   </head>
   <body>
@@ -29,10 +30,8 @@
             <% }) %>
           </ul>
         </div>
+        <%- include("./common/footer.ejs") %>
       </section>
-      <footer>
-        <div class="copyright">云杉科技 &copy 版权所有</div>
-      </footer>
     </div>
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -54,7 +53,9 @@
                       _this.parents('.item-info-frame').find('.vote-num i').html(vote_num+1);
                   }
               },
-              error: function(){}
+              error: function(){
+                  console.log('error');
+              }
           });
       });
     </script>

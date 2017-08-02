@@ -4,7 +4,7 @@ var item = require('../../models/item');
 
 router.get(['/','/index'], function(req, res, next) {
     item.find(function(err, doc){
-        res.render('home/index', { title: 'vote', items: doc});
+        res.render('home/index', { title: 'vote', year: 2017, items: doc});
     });
 });
 

@@ -1,0 +1,89 @@
+body
+  //background #c9c9c9
+  background url("../images/bg.jpg") no-repeat
+  background-size cover
+  background-position left top
+
+.wrap
+  width 100%
+  height auto
+
+header,section,footer
+  width 100%
+  height auto
+
+.common-content
+  margin 20vh auto
+  padding 0
+  background rgba(255,255,255,.6)
+  box-shadow 0 0 15px #b7b7b7
+
+@media (min-width 0) and (max-width 767px)
+  .content
+    width 100vw
+    height 60vh
+    @extend .common-content
+
+@media (min-width 768px)
+  .content
+    width 60vw
+    height 60vh
+    @extend .common-content
+
+.content form
+  margin 0 auto
+  padding 12vh 0
+  box-sizing border-box
+  width 80%
+  height 60vh
+  //background #2c378a
+
+.line
+  margin 0 auto
+  width 80%
+  height 9vh
+  line-height 9vh
+  //background #6cc3c4
+  font-size 0
+
+input[type='text'],input[type='password']
+  width 70%
+  height 6vh
+  line-height 6vh
+  padding 0 1vh
+  box-sizing border-box
+  font-size 1rem
+  border none
+  background none
+  border-bottom 1px solid rgba(255,255,255,0.4)
+  outline none
+
+.line-col
+  display inline-block
+
+.line .line-col:nth-child(1)
+  width 35%
+  text-align right
+  font-size 1rem
+  color #525247
+
+.line .line-col:nth-child(2)
+  width 65%
+  text-align left
+
+.submit
+  height 6vh
+  line-height 6vh
+  padding 0 1vh
+  box-sizing border-box
+  font-size 1rem
+  width 30%
+  background #666666
+  border 0
+  color #fff
+
+.submit:hover
+  opacity 0.8
+
+.submit:active
+  opacity 1

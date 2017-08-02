@@ -1,0 +1,17 @@
+html,
+body,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font: 14px "Microsoft YaHei UI", Arial, sans-serif;
+}
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 20px auto;
+}

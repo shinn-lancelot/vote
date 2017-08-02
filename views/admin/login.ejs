@@ -4,21 +4,43 @@
     <title><%= title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi">
-    <link rel='stylesheet' href='/home/stylesheets/style.css' />
+    <link rel='stylesheet' href='/admin/stylesheets/base.css' />
+    <link rel='stylesheet' href='/admin/stylesheets/login.css' />
 </head>
 <body>
-<form action="/admin/login" method="post">
-    <p>
-        <span>用户名:</span>
-        <br>
-        <input id="username" name="username" type="text">
-    </p>
-    <p>
-        <span>密码:</span>
-        <br>
-        <input id="password" name="password" type="password">
-    </p>
-    <p><input type="submit" value="submit"></p>
-</form>
+    <div class="wrap">
+        <section>
+            <div class="content">
+                <form action="/admin/login" method="post">
+                    <div class="line" style="font-size: 1.2rem;text-align: center;color: #525247;">
+                        投票后台登录
+                    </div>
+                    <div class="line">
+                        <div class="line-col">用户名：</div>
+                        <div class="line-col"><input type="text" name="username" id="username" required placeholder="请输入用户名" /></div>
+                    </div>
+                    <div class="line">
+                        <div class="line-col">密码：</div>
+                        <div class="line-col"><input type="password" name="password" id="password" required placeholder="请输入密码" /></div>
+                    </div>
+                    <div class="line">
+                        <div class="line-col"></div>
+                        <div class="line-col"><input type="submit" value="提交" class="submit" /></div>
+                    </div>
+                    <!--<p>-->
+                        <!--<span>用户名:</span>-->
+                        <!--<br>-->
+                        <!--<input id="username" name="username" type="text">-->
+                    <!--</p>-->
+                    <!--<p>-->
+                        <!--<span>密码:</span>-->
+                        <!--<br>-->
+                        <!--<input id="password" name="password" type="password">-->
+                    <!--</p>-->
+                    <!--<p><input type="submit" value="submit"></p>-->
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
