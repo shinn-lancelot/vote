@@ -12,6 +12,7 @@ var vote = require('./routes/home/vote');
 var login = require('./routes/admin/login');
 var admin = require('./routes/admin/index');
 var addItem = require('./routes/admin/addItem');
+var upload = require('./routes/admin/upload');
 
 //db connect
 var mongoose=require('mongoose');
@@ -40,6 +41,7 @@ app.use('/vote', vote);
 app.use('/admin', login);
 app.use('/admin/index', admin);
 app.use('/admin/addItem', addItem);
+app.use('/admin/upload', upload);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

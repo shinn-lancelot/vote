@@ -5,6 +5,6 @@ var userScheMa = new Schema({
     password: String,
     appid: String,
     appsecret: String,
-});
+}, {versionKey: '_versionKey'});
 var user = mongoose.model('users', userScheMa);
 module.exports = user;
