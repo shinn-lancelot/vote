@@ -1,7 +1,7 @@
 {
   "name": "vote",
   "version": "1.0.0",
-  "description": "a vote demo",
+  "description": "A vote demo. 一个投票demo。",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www"
